@@ -1,0 +1,728 @@
+/* ============================================================
+   Product Landing Page Design System — Apple-Inspired Detail Pages
+   ============================================================ */
+
+.prod-page {
+  position: relative;
+  background: #ffffff;
+  overflow: hidden;
+}
+
+/* ---------- Hero Section ---------- */
+.prod-hero {
+  position: relative;
+  padding-top: clamp(140px, 18vh, 190px);
+  padding-bottom: clamp(60px, 8vh, 100px);
+  background: radial-gradient(circle at 50% -20%, rgba(37, 99, 235, 0.08) 0%, rgba(255, 255, 255, 0) 70%);
+  overflow: hidden;
+}
+
+.prod-hero__badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(37, 99, 235, 0.08);
+  border: 1px solid rgba(37, 99, 235, 0.2);
+  color: var(--blue-700);
+  padding: 6px 16px;
+  border-radius: var(--radius-pill);
+  font-size: 13px;
+  font-weight: 600;
+  margin-bottom: 24px;
+}
+
+.prod-hero__title {
+  font-size: clamp(38px, 5.2vw, 68px);
+  line-height: 1.1;
+  font-weight: 700;
+  letter-spacing: -0.03em;
+  color: var(--neutral-950);
+  margin-bottom: 20px;
+  max-width: 820px;
+}
+
+.prod-hero__subtitle {
+  font-size: clamp(17px, 1.4vw, 21px);
+  line-height: 1.6;
+  color: var(--neutral-600);
+  max-width: 680px;
+  margin-bottom: 36px;
+}
+
+.prod-hero__actions {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  flex-wrap: wrap;
+  margin-bottom: 54px;
+}
+
+.btn--prod-primary {
+  background: var(--blue-600);
+  color: #ffffff;
+  border-radius: var(--radius-pill);
+  padding: 14px 32px;
+  font-size: 16px;
+  font-weight: 600;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  box-shadow: 0 10px 28px rgba(37, 99, 235, 0.28);
+  transition: background 0.2s ease, transform 0.2s ease;
+}
+
+.btn--prod-primary:hover {
+  background: var(--blue-700);
+  transform: translateY(-2px);
+  color: #ffffff;
+}
+
+.btn--prod-secondary {
+  background: var(--neutral-100);
+  color: var(--neutral-900);
+  border-radius: var(--radius-pill);
+  padding: 14px 28px;
+  font-size: 16px;
+  font-weight: 600;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  border: 1px solid var(--neutral-200);
+  transition: background 0.2s ease, transform 0.2s ease;
+}
+
+.btn--prod-secondary:hover {
+  background: var(--neutral-200);
+  transform: translateY(-2px);
+}
+
+/* Showcase Hero Mockup */
+.prod-hero__visual {
+  position: relative;
+  width: 100%;
+  border-radius: 32px;
+  overflow: hidden;
+  background: var(--neutral-900);
+  box-shadow: 
+    0 32px 80px -16px rgba(15, 23, 42, 0.22),
+    0 0 0 1px rgba(255, 255, 255, 0.1);
+}
+
+.prod-hero__img {
+  width: 100%;
+  height: auto;
+  max-height: 520px;
+  object-fit: cover;
+  display: block;
+}
+
+/* ---------- Features Grid Section ---------- */
+.prod-features {
+  padding-top: clamp(80px, 10vw, 120px);
+  padding-bottom: clamp(60px, 8vw, 90px);
+  background: #ffffff;
+}
+
+.prod-section-header {
+  text-align: center;
+  max-width: 680px;
+  margin: 0 auto clamp(48px, 6vw, 72px);
+}
+
+.prod-section-title {
+  font-size: clamp(30px, 3.8vw, 48px);
+  font-weight: 700;
+  color: var(--neutral-950);
+  letter-spacing: -0.025em;
+  margin-bottom: 16px;
+}
+
+.prod-section-desc {
+  font-size: clamp(16px, 1.2vw, 18px);
+  color: var(--neutral-600);
+  line-height: 1.6;
+}
+
+.prod-features__grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 28px;
+}
+
+@media (max-width: 768px) {
+  .prod-features__grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.prod-feature-card {
+  background: #fcfcfd;
+  border: 1px solid #e5e7eb;
+  border-radius: 24px;
+  padding: 36px 32px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: flex;
+  flex-direction: column;
+}
+
+.prod-feature-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.06);
+  border-color: rgba(37, 99, 235, 0.3);
+}
+
+.prod-feature-icon {
+  width: 52px;
+  height: 52px;
+  border-radius: 16px;
+  background: var(--blue-50);
+  color: var(--blue-600);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 24px;
+}
+
+.prod-feature-title {
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--neutral-950);
+  margin-bottom: 12px;
+}
+
+.prod-feature-desc {
+  font-size: 15px;
+  line-height: 1.6;
+  color: var(--neutral-600);
+}
+
+/* ============================================================
+   APPLE DESIGN SYSTEM — SPEC HIGHLIGHTS GRID
+   ============================================================ */
+.apple-spec-section {
+  padding: clamp(60px, 8vw, 100px) 0;
+  background: #ffffff;
+}
+
+.apple-spec-header {
+  text-align: center;
+  max-width: 760px;
+  margin: 0 auto 52px;
+}
+
+.apple-spec-title {
+  font-size: clamp(32px, 4vw, 52px);
+  font-weight: 700;
+  letter-spacing: -0.03em;
+  color: #1d1d1f;
+  margin-bottom: 24px;
+  line-height: 1.15;
+}
+
+.apple-model-selector {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: #f5f5f7;
+  padding: 6px;
+  border-radius: var(--radius-pill);
+  margin-bottom: 20px;
+  max-width: 100%;
+  overflow-x: auto;
+}
+
+.apple-model-chip {
+  background: transparent;
+  border: none;
+  padding: 8px 18px;
+  border-radius: var(--radius-pill);
+  font-size: 14px;
+  font-weight: 600;
+  color: #6e6e73;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  transition: background 0.2s ease, color 0.2s ease, box-shadow 0.2s ease;
+  white-space: nowrap;
+}
+
+.apple-model-chip:hover {
+  color: #1d1d1f;
+}
+
+.apple-model-chip.is-active {
+  background: #1d1d1f;
+  color: #ffffff;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.apple-model-chip__icon {
+  opacity: 0;
+  transition: opacity 0.2s ease;
+}
+
+.apple-model-chip.is-active .apple-model-chip__icon {
+  opacity: 1;
+}
+
+.apple-spec-subtitle {
+  font-size: 16px;
+  color: #86868b;
+  margin: 0;
+}
+
+.apple-spec-subtitle strong {
+  color: #1d1d1f;
+}
+
+/* 4-Card Apple Highlights Grid */
+.apple-spec-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+@media (max-width: 992px) {
+  .apple-spec-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 576px) {
+  .apple-spec-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.apple-spec-card {
+  background: #f5f5f7;
+  border-radius: 20px;
+  padding: 32px 24px;
+  min-height: 190px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: relative;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.apple-spec-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 16px 36px rgba(0, 0, 0, 0.05);
+}
+
+.apple-spec-card__val {
+  display: flex;
+  flex-direction: column;
+}
+
+.apple-spec-card__sub {
+  font-size: 12px;
+  font-weight: 600;
+  color: #86868b;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.apple-spec-card__num {
+  font-size: clamp(34px, 3.6vw, 48px);
+  font-weight: 700;
+  letter-spacing: -0.03em;
+  color: #1d1d1f;
+  line-height: 1.1;
+}
+
+.apple-spec-card__val-sm {
+  font-size: 22px;
+  font-weight: 700;
+  color: #1d1d1f;
+  letter-spacing: -0.02em;
+}
+
+.apple-spec-card__icon-wrap {
+  width: 48px;
+  height: 48px;
+  border-radius: 14px;
+  background: #ffffff;
+  color: #1d1d1f;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 16px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.04);
+}
+
+.apple-spec-card__corner-icon {
+  position: absolute;
+  top: 24px;
+  right: 24px;
+  color: #86868b;
+}
+
+.apple-spec-card__label {
+  font-size: 13px;
+  line-height: 1.45;
+  color: #6e6e73;
+  margin: 0;
+}
+
+/* ============================================================
+   APPLE DESIGN SYSTEM — INTERACTIVE WORKSPACE CARD
+   ============================================================ */
+.apple-ar-section {
+  padding: 40px 0;
+  background: #ffffff;
+}
+
+.apple-ar-card {
+  background: #f5f5f7;
+  border-radius: 32px;
+  padding: clamp(36px, 5vw, 64px);
+  display: grid;
+  grid-template-columns: 1fr 1.1fr;
+  gap: 48px;
+  align-items: center;
+  overflow: hidden;
+}
+
+@media (max-width: 900px) {
+  .apple-ar-card {
+    grid-template-columns: 1fr;
+  }
+}
+
+.apple-ar-card__icon-chip {
+  width: 48px;
+  height: 48px;
+  border-radius: 16px;
+  background: #ffffff;
+  color: #1d1d1f;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 24px;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.05);
+}
+
+.apple-ar-card__title {
+  font-size: clamp(26px, 3.2vw, 42px);
+  font-weight: 700;
+  line-height: 1.18;
+  letter-spacing: -0.025em;
+  color: #1d1d1f;
+  margin-bottom: 16px;
+}
+
+.apple-ar-card__desc {
+  font-size: 16px;
+  line-height: 1.55;
+  color: #6e6e73;
+  margin-bottom: 32px;
+}
+
+.apple-swatch-picker {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.apple-swatch-label {
+  font-size: 13px;
+  color: #86868b;
+}
+
+.apple-swatch-label strong {
+  color: #1d1d1f;
+}
+
+.apple-swatch-list {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.apple-swatch-btn {
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  border: 1px solid rgba(0, 0, 0, 0.15);
+  cursor: pointer;
+  transition: transform 0.2s ease, outline 0.2s ease;
+}
+
+.apple-swatch-btn:hover {
+  transform: scale(1.15);
+}
+
+.apple-swatch-btn.is-active {
+  outline: 2px solid #0066cc;
+  outline-offset: 3px;
+}
+
+/* Device Frame Mockup */
+.apple-device-frame {
+  position: relative;
+  background: #ffffff;
+  border-radius: 24px;
+  padding: 16px;
+  box-shadow: 
+    0 24px 60px rgba(0, 0, 0, 0.12),
+    0 0 0 1px rgba(0, 0, 0, 0.06);
+  overflow: hidden;
+}
+
+.apple-device-frame__notch {
+  width: 100px;
+  height: 14px;
+  background: #1d1d1f;
+  border-radius: 0 0 10px 10px;
+  margin: -16px auto 14px auto;
+}
+
+.apple-device-frame__img {
+  width: 100%;
+  height: auto;
+  border-radius: 14px;
+  display: block;
+  object-fit: cover;
+}
+
+/* ============================================================
+   APPLE DESIGN SYSTEM — DUAL PROMO CARDS (2-UP)
+   ============================================================ */
+.apple-dual-section {
+  padding: 40px 0 clamp(60px, 8vw, 100px);
+  background: #ffffff;
+}
+
+.apple-dual-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+}
+
+@media (max-width: 860px) {
+  .apple-dual-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.apple-promo-card {
+  background: #f5f5f7;
+  border-radius: 28px;
+  padding: 44px 40px 0 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  overflow: hidden;
+  position: relative;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.apple-promo-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 24px 48px rgba(0, 0, 0, 0.08);
+}
+
+.apple-promo-card__eyebrow {
+  font-size: 12px;
+  font-weight: 600;
+  color: #6e6e73;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  display: block;
+  margin-bottom: 8px;
+}
+
+.apple-promo-card__title {
+  font-size: clamp(22px, 2.4vw, 32px);
+  font-weight: 700;
+  color: #1d1d1f;
+  letter-spacing: -0.02em;
+  line-height: 1.2;
+  margin-bottom: 12px;
+}
+
+.apple-promo-card__desc {
+  font-size: 15px;
+  line-height: 1.5;
+  color: #6e6e73;
+  margin-bottom: 24px;
+}
+
+.apple-promo-card__link {
+  color: #0066cc;
+  font-size: 15px;
+  font-weight: 600;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  transition: gap 0.2s ease;
+}
+
+.apple-promo-card__link:hover {
+  gap: 8px;
+}
+
+.apple-promo-card__visual {
+  margin-top: 36px;
+  position: relative;
+  border-top-left-radius: 16px;
+  border-top-right-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 -8px 24px rgba(0, 0, 0, 0.08);
+  transform: translateY(8px);
+}
+
+.apple-promo-card__img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  display: block;
+}
+
+/* ============================================================
+   APPLE DESIGN SYSTEM — LINEUP COMPARISON SECTION
+   ============================================================ */
+.apple-lineup-section {
+  padding: clamp(60px, 8vw, 100px) 0;
+  background: #f5f5f7;
+}
+
+.apple-lineup-header {
+  text-align: center;
+  max-width: 640px;
+  margin: 0 auto 56px;
+}
+
+.apple-lineup-title {
+  font-size: clamp(30px, 3.8vw, 48px);
+  font-weight: 700;
+  color: #1d1d1f;
+  letter-spacing: -0.025em;
+  margin-bottom: 12px;
+}
+
+.apple-lineup-all-link {
+  color: #0066cc;
+  font-size: 16px;
+  font-weight: 600;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  transition: gap 0.2s ease;
+}
+
+.apple-lineup-all-link:hover {
+  gap: 10px;
+}
+
+.apple-lineup-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+@media (max-width: 992px) {
+  .apple-lineup-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 576px) {
+  .apple-lineup-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.apple-lineup-card {
+  background: #ffffff;
+  border: 1px solid #e5e5e7;
+  border-radius: 22px;
+  padding: 24px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+}
+
+.apple-lineup-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
+  border-color: #0066cc;
+}
+
+.apple-lineup-card.is-current {
+  border-color: #0066cc;
+  box-shadow: 0 8px 24px rgba(0, 102, 204, 0.12);
+}
+
+.apple-lineup-card__media {
+  width: 100%;
+  height: 130px;
+  border-radius: 12px;
+  overflow: hidden;
+  margin-bottom: 18px;
+  background: #f5f5f7;
+}
+
+.apple-lineup-card__img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.apple-lineup-card__badge {
+  font-size: 11px;
+  font-weight: 700;
+  color: #0066cc;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: 6px;
+}
+
+.apple-lineup-card__name {
+  font-size: 18px;
+  font-weight: 700;
+  color: #1d1d1f;
+  margin-bottom: 6px;
+}
+
+.apple-lineup-card__tagline {
+  font-size: 12px;
+  color: #6e6e73;
+  line-height: 1.4;
+  margin-bottom: 20px;
+  min-height: 34px;
+}
+
+.apple-lineup-card__action {
+  margin-top: auto;
+  width: 100%;
+}
+
+.apple-lineup-card__btn {
+  background: #0066cc;
+  color: #ffffff !important;
+  font-size: 13px;
+  font-weight: 600;
+  padding: 10px 18px;
+  border-radius: var(--radius-pill);
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  width: 100%;
+  transition: background 0.2s ease;
+}
+
+.apple-lineup-card__btn:hover {
+  background: #004499;
+}
